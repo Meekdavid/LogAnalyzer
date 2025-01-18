@@ -1,4 +1,5 @@
-﻿using LogAnalyzerLibrary.Interfaces;
+﻿using LogAnalyzerLibrary.Helpers.FolderHelper;
+using LogAnalyzerLibrary.Interfaces;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -80,12 +81,22 @@ namespace LogAnalyzerLibrary.Repositories
             {
                 Log.Information("Searching logs by size in directory: {DirectoryPath}", logFolder);
 
-                var result = Directory.EnumerateFiles(logFolder)
-                    .Where(file =>
-                    {
-                        var sizeInKb = new FileInfo(file).Length / 1024;
-                        return sizeInKb >= minSizeKb && sizeInKb <= maxSizeKb;
-                    });
+                var fullFilePath = await FolderSearchHelper.RetrieveFolderLocation(logFolder);
+
+                var result = Directory.EnumerateFiles(fullFilePath)
+                   .Where(file =>
+                       {
+                           try
+                           {
+                               var sizeInKb = new FileInfo(file).Length / 1024.0; // Using double for precise calculation
+                               return sizeInKb >= minSizeKb && sizeInKb <= maxSizeKb;
+                           }
+                           catch (Exception ex)
+                           {
+                               Console.WriteLine($"Error processing file: {file}, Exception: {ex.Message}");
+                               return false;
+                           }
+                       });
 
                 Log.Information("Search by size completed successfully.");
 
