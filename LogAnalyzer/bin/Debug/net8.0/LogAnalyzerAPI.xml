@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LogAnalyzerAPI</name>
+    </assembly>
+    <members>
+        <member name="T:LogAnalyzerAPI.Controllers.LogsAnalyzerController">
+            <summary>
+            Controller to manage and analyze log files.
+            </summary>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.CountTotalLogsAsync(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Counts the total logs in a specified directory within a date range.
+            </summary>
+            <param name="logFolder">The directory to search.</param>
+            <param name="startDate">Start date of the range. Format is <b>2025-01-15T14:30:00</b></param>
+            <param name="endDate">End date of the range. Format is <b>2025-01-15T14:30:00</b></param>
+            <returns>The total number of logs.</returns>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.CountUniqueErrorsAsync(System.String)">
+            <summary>
+            Counts unique errors in a specified log file.
+            </summary>
+            <param name="logFolder">The path of the log file.</param>
+            <returns>The number of unique errors.</returns>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.CountDuplicatedErrorsAsync(System.String)">
+            <summary>
+            Counts duplicated errors in a specified log file.
+            </summary>
+            <param name="logFolder">The path of the log file.</param>
+            <returns>The number of duplicated errors.</returns>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.DeleteLogsByPeriodAsync(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Deletes logs in a directory within a date range.
+            </summary>
+            <param name="logFolder">The directory to search.</param>
+            <param name="startDate">Start date of the range. Format is <b>2025-01-15T14:30:00</b></param>
+            <param name="endDate">End date of the range. Format is <b>2025-01-15T14:30:00</b></param>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.ArchiveLogsByPeriodAsync(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Archives logs in a directory within a date range.
+            </summary>
+            <param name="logFolder">The directory to search.</param>
+            <param name="startDate">Start date of the range. Format is <b>2025-01-15T14:30:00</b></param>
+            <param name="endDate">End date of the range. Format is <b>2025-01-15T14:30:00</b></param>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.DeleteArchivedLogsByPeriodAsync(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Deletes archived logs in a directory within a date range.
+            </summary>
+            <param name="logFolder">The directory to search.</param>
+            <param name="startDate">Start date of the range. Format is <b>2025-01-15T14:30:00</b></param>
+            <param name="endDate">End date of the range. Format is <b>2025-01-15T14:30:00</b></param>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.SearchLogsInDirectoriesAsync(System.String,System.String,System.Boolean)">
+            <summary>
+            Searches logs in directories with optional subdirectory inclusion.
+            </summary>
+            <param name="logFolder">The directory to search.</param>
+            <param name="searchPattern">The search pattern (e.g., "*.log").</param>
+            <param name="includeSubdirectories">Whether to include subdirectories.</param>
+            <returns>A list of matching log file paths.</returns>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.SearchLogsBySizeAsync(System.String,System.Int64,System.Int64)">
+            <summary>
+            Searches logs in a directory by size range.
+            </summary>
+            <param name="logFolder">The directory to search.</param>
+            <param name="minSizeKb">Minimum size in kilobytes.</param>
+            <param name="maxSizeKb">Maximum size in kilobytes.</param>
+            <returns>A list of matching log file paths.</returns>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.SearchLogsByDirectoryAsync(System.String)">
+            <summary>
+            Searches logs in a specific directory.
+            </summary>
+            <param name="logFolder">The directory to search.</param>
+            <returns>A list of log file paths.</returns>
+        </member>
+        <member name="M:LogAnalyzerAPI.Controllers.LogsAnalyzerController.UploadLogsToRemoteServerAsync(LogAnalyzerLibrary.Models.UploadRequest)">
+            <summary>
+            Uploads logs to a remote server via API.
+            </summary>
+            <param name="request">The upload request details.</param>
+        </member>
+    </members>
+</doc>

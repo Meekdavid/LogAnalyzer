@@ -1,0 +1,12 @@
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\bin\Debug\net8.0\LogAnalyzerLibrary.deps.json
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\bin\Debug\net8.0\LogAnalyzerLibrary.dll
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\bin\Debug\net8.0\LogAnalyzerLibrary.pdb
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\obj\Debug\net8.0\LogAnalyzerLibrary.csproj.AssemblyReference.cache
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\obj\Debug\net8.0\LogAnalyzerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\obj\Debug\net8.0\LogAnalyzerLibrary.AssemblyInfoInputs.cache
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\obj\Debug\net8.0\LogAnalyzerLibrary.AssemblyInfo.cs
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\obj\Debug\net8.0\LogAnalyzerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\obj\Debug\net8.0\LogAnalyzerLibrary.dll
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\obj\Debug\net8.0\refint\LogAnalyzerLibrary.dll
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\obj\Debug\net8.0\LogAnalyzerLibrary.pdb
+C:\Users\David Mboko\source\repos\LogAnalyzer\LogAnalyzerLibrary\obj\Debug\net8.0\ref\LogAnalyzerLibrary.dll
